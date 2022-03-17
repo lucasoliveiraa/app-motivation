@@ -4,36 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     android:background="@color/colorPrimary"
-    tools:context=".SplashActivity">
+    android:padding="16dp"
+    tools:context=".ui.SplashActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:text="@string/vamos_comecar"
         android:textColor="@color/white"
-        android:textSize="32sp"
-        android:text="@string/vamos_comecar" />
+        android:textSize="32sp" />
 
     <EditText
+        android:id="@+id/editName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:gravity="center"
-        android:textColorHint="@color/white"
-        android:textSize="24sp"
+        android:hint="@string/qual_seu_nome"
         android:inputType="text"
-        android:hint="@string/qual_seu_nome"/>
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="24sp" />
 
     <Button
+        android:id="@+id/buttonSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:textSize="20sp"
-        android:padding="16dp"
+        android:layout_centerHorizontal="true"
         android:backgroundTint="@color/colorAccent"
-        android:text="@string/salvar"/>
+        android:padding="16dp"
+        android:text="@string/salvar"
+        android:textSize="20sp" />
 </RelativeLayout>
