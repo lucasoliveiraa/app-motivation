@@ -14,6 +14,7 @@ import com.example.motivation.infra.SecurityPreferences
 class UserActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityUserBinding
+    private lateinit var securityPreferences: SecurityPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,22 +22,23 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
         binding = ActivityUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.button_save.setOnClickListener(this)
-
         supportActionBar?.hide()
 
+        securityPreferences = SecurityPreferences(this)
+
+        binding.buttonSave.setOnClickListener(this)
         verifyUserName()
     }
 
-    override fun onClick(view: View) {
-        val id = view.id
+    override fun onClick(view: View?) {
+        val id: Int? = view?.id
         if (id == R.id.button_save) {
             handleSave()
         }
     }
 
     private fun verifyUserName() {
-        val name = SecurityPreferences(this).getString(MotivationConstants.KEY.USER_NAME)
+        val name = securityPreferences.getStoredString(MotivationConstants.KEY.USER_NAME)
         if (name != "") {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
@@ -44,15 +46,16 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun handleSave() {
-        val name = findViewById<EditText>(R.id.edit_name).text.toString()
+        val name: String = binding.editName.text.toString()
 
-        if (name != "") {
-            SecurityPreferences(this).storeString(MotivationConstants.KEY.USER_NAME, name)
-
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
+        if (name == "") {
+            Toast.makeText(this, getString(R.string.validation_mandatory_name), Toast.LENGTH_LONG)
+                .show()
         } else {
-            Toast.makeText(this, "Informe seu nome!", Toast.LENGTH_SHORT).show()
+            securityPreferences.storeString(MotivationConstants.KEY.USER_NAME, name)
+            startActivity(Intent(this, MainActivity::class.java))
+
+            finish()
         }
     }
 }
