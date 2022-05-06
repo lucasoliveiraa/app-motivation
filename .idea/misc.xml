@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/projetos/java/Motivation/app/src/main/res/drawable/ic_favorite.xml" value="0.1795" />
+        <entry key="..\:/projetos/java/Motivation/app/src/main/res/layout/activity_coffe.xml" value="0.25" />
         <entry key="..\:/projetos/java/Motivation/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/projetos/java/Motivation/app/src/main/res/layout/activity_splash.xml" value="0.25" />
         <entry key="..\:/projetos/java/Motivation/app/src/main/res/layout/activity_user.xml" value="0.1762917933130699" />

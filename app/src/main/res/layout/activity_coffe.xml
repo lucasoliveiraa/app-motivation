@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/boxTitle"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:background="#855E53"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_backspace"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_margin="16dp"
+        android:layout_weight="1"
+        android:contentDescription="@string/phrases_all"
+        android:src="@drawable/ic_backspace"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#FFF" />
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cappuccino"
+        android:textColor="#FFF"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/boxTitle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_time"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/phrases_all"
+        android:src="@drawable/ic_time"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/image_favorite"
+        app:layout_constraintTop_toBottomOf="@+id/boxTitle"
+        app:tint="#855E53" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15 minutos"
+        android:textColor="#918D80"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@+id/image_time"
+        app:layout_constraintRight_toRightOf="@+id/image_time"
+        app:layout_constraintTop_toBottomOf="@+id/image_time" />
+
+    <ImageView
+        android:id="@+id/image_favorite"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/phrases_all"
+        android:src="@drawable/ic_favorite"
+        app:layout_constraintLeft_toRightOf="@+id/image_time"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boxTitle"
+        app:tint="#855E53" />
+
+    <TextView
+        android:id="@+id/textFavorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="51244"
+        android:textColor="#918D80"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/image_favorite"
+        app:layout_constraintRight_toRightOf="@id/image_favorite"
+        app:layout_constraintTop_toBottomOf="@id/image_favorite"/>
+
+    <View
+        android:id="@+id/viewSeparator"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:background="#918D80"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFavorite" />
+
+    <TextView
+        android:id="@+id/textDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/description"
+        android:textAlignment="center"
+        android:textColor="#918D80"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewSeparator" />
+
+    <TextView
+        android:id="@+id/textIngredientes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Ingredientes"
+        android:textAlignment="center"
+        android:textColor="#757471"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDescription" />
+
+    <ImageView
+        android:id="@+id/image_Right"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="2"
+        android:contentDescription="@string/phrases_all"
+        android:src="@drawable/ic_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textIngredientes"
+        app:tint="#855E53" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 dose espresso"
+        android:textColor="#918D80"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/image_Right"
+        app:layout_constraintStart_toEndOf="@+id/image_Right"
+        app:layout_constraintTop_toTopOf="@+id/image_Right" />
+
+    <ImageView
+        android:id="@+id/image_Right2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="2"
+        android:contentDescription="@string/phrases_all"
+        android:src="@drawable/ic_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_Right"
+        app:tint="#855E53" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100ml leite"
+        android:textColor="#918D80"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/image_Right2"
+        app:layout_constraintStart_toEndOf="@+id/image_Right2"
+        app:layout_constraintTop_toTopOf="@+id/image_Right2" />
+
+    <ImageView
+        android:id="@+id/image_Right3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="2"
+        android:contentDescription="@string/phrases_all"
+        android:src="@drawable/ic_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_Right2"
+        app:tint="#855E53" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 colher de chocolate em pó"
+        android:textColor="#918D80"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/image_Right3"
+        app:layout_constraintStart_toEndOf="@+id/image_Right3"
+        app:layout_constraintTop_toTopOf="@+id/image_Right3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

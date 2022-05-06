@@ -12,4 +12,5 @@
     <string name="hello">Olá</string>
 
     <string name="validation_mandatory_name">Informe seu nome.</string>
+    <string name="description">Uma simples e perfeita extraída dose de espresso misturado com leite fresco e chocolate fazem esta bebiba deliciosa.</string>
 </resources>
